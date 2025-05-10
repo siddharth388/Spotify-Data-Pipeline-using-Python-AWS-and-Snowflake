@@ -34,8 +34,8 @@ CREATE OR REPLACE STORAGE INTEGRATION s3_integration
 TYPE = EXTERNAL_STAGE
 STORAGE_PROVIDER = s3
 ENABLED = TRUE
-STORAGE_AWS_ROLE_ARN = 'arn:aws:iam::862418778352:role/snowflake-s3-connection'
-STORAGE_ALLOWED_LOCATIONS = ('s3://spotify-etl-project-sidd/transformed_data/');
+STORAGE_AWS_ROLE_ARN = 'your-aws-arn'
+STORAGE_ALLOWED_LOCATIONS = ('your-s3-location');
 
 
 
@@ -48,17 +48,17 @@ skip_header = 1;
 
 
 CREATE OR REPLACE STAGE load_data_from_s3_album
-URL = 's3://spotify-etl-project-sidd/transformed_data/album_data/'
+URL = 'your-s3-location'
 storage_integration = s3_integration
 file_format = json_ff;
 
 CREATE OR REPLACE STAGE load_data_from_s3_artist
-URL = 's3://spotify-etl-project-sidd/transformed_data/artist_data/'
+URL = 'your-s3-location'
 storage_integration = s3_integration
 file_format = json_ff;
 
 CREATE OR REPLACE STAGE load_data_from_s3_songs
-URL = 's3://spotify-etl-project-sidd/transformed_data/songs_data/'
+URL = 'your-s3-location'
 storage_integration = s3_integration
 file_format = json_ff;
 
