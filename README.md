@@ -15,3 +15,6 @@ AWS Cloud -
 
 Snowflake - 
 After all the data transformation data is loaded into Snowflake with the help of Snowpipe. Here by using Snowpipe we establish a connection between S3 bucket and Snowflake in order to pull data from S3 bucket to Snowflake tables.
+
+
+![1742363494352](https://github.com/user-attachments/assets/829e5ed2-f3d6-4590-b424-85c0f2afb788)
